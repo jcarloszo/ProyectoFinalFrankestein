@@ -21,9 +21,9 @@ function App() {
       </Container>
     </Navbar>
     <section className='m-5'>
-      <h1 className='text-center display-4'>Control de Permanencia en Hospitales</h1>
+      <h1 className='text-center display-5'>Control de Permanencia en Hospitales</h1>
       <div className='text-center'>
-        <img className="w-50 p-2" src={Logo} alt="Logo App" />
+        <img className="p-2 imagenInicio" src={Logo} alt="Logo App" />
       </div>
       <div>
       <div className="d-grid gap-2">

@@ -1,9 +1,27 @@
-#root{
-  /* background: rgb(128, 128, 128); */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* @media screen and (min-width: 768px) {
-  .logoInicio{
-    width: 100%;
-  }
-  } */
+.main {
+  flex-grow: 1;
+  
+}
+
+    .imagenInicio {
+      width: 50%; 
+    }
+
+    @media (max-width: 600px) {
+      .imagenInicio {
+        width: 100%; 
+      }
+    }
+    
+    
+    
+    
+    
+    
+
