@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.main {
+.mainSection {
   flex-grow: 1;
   
 }
@@ -19,7 +19,15 @@
       }
     }
     
-    
+    .imagenLogin {
+      width: 30%; 
+    }
+
+    @media (max-width: 600px) {
+      .imagenLogin {
+        width: 100%; 
+      }
+    }    
     
     
     
