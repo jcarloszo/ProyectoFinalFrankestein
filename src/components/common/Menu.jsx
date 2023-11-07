@@ -14,6 +14,10 @@ const Menu = () => {
                     <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
                         <Nav className="ml-auto">
                             <NavLink end className={'nav-item nav-link'} to='/'>Inicio</NavLink>
+                            <NavLink end className={'nav-item nav-link'} to='/formularios'>Formularios</NavLink>
+                            <NavLink end className={'nav-item nav-link'} to='/informes'>Informes</NavLink>
+                            <NavLink end className={'nav-item nav-link'} to='/agentes'>Agentes</NavLink>
+                            <NavLink end className={'nav-item nav-link'} to='/tareas'>Tareas</NavLink>
                             <NavLink end className={'nav-item nav-link'} to='/login'>Acceder</NavLink>
                         </Nav>
                     </Navbar.Collapse>

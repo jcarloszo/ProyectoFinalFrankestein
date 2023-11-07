@@ -3,6 +3,7 @@ import { Form, Button, Alert } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../../assets/Logo.png";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -21,7 +22,11 @@ const Login = () => {
             console.log("Inicio de sesion exitoso");
             navegacion('/')
         } else {
-            setError('Nombre de usuario o contraseña incorrecta');
+            Swal.fire(
+                'Error',
+                'Usuario o password incorrectos',
+                'error'
+            )
         }
 
         setLoading(false);
