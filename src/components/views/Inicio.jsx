@@ -49,6 +49,12 @@ function Inicio() {
                         >
                             Gestion de usuarios
                         </Link>
+                        <Link
+                            to="/ControlAsistencia"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
+                            Control Asistencia
+                        </Link>
                     </div>
                 </div>
             </section>

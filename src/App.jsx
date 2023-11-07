@@ -11,6 +11,7 @@ import Login from "./components/views/Login";
 import Navbar from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import GestionUsuarios from './views/GestionUsuarios/GestionUsuarios'
+import ControlAsistencia from './views/ControlAsistencia/ControlAsistencia'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/informe" element={<InformeView />} />
         <Route path="/detalle-informe" element={<DetalleInforme />} />
         <Route path="/GestionUsuarios" element={<GestionUsuarios />} />
+        <Route path="/ControlAsistencia" element={<ControlAsistencia />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
