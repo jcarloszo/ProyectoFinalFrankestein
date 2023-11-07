@@ -3,7 +3,7 @@ import { EmployeeClass } from "../models/employee";
 
 const useEmployees = () =>{
     
-    const [employees, setEmployees] = useState<Employee[]>([{ id: 0, name: '', dni: 0 , nivel: '',funcion:''}]);
+    const [employees, setEmployees] = useState<IEmployee[]>([{ id: 0, name: '', dni: 0 , nivel: '',funcion:''}]);
     
     const [error,setError] = useState(null);
 
@@ -11,7 +11,7 @@ const useEmployees = () =>{
         const obtenerEmpleados = ()=>{
             try{ 
 
-                const empleados : Employee[] = [
+                const empleados : IEmployee[] = [
                     {id:0,name:'Juan',dni:88970,nivel:'A',funcion:'B'},
                     {id:1,name:'Juan',dni:88970,nivel:'A',funcion:'B'},
                 ];
@@ -27,9 +27,9 @@ const useEmployees = () =>{
     ,[])
 
 
-    const findEmployee = (employee:Employee) =>{ 
+    const findEmployee = (employee:EmployeeClass) =>{ 
         
-        const empleado  = employees?.forEach((element:Employee)=>{
+        const empleado  = employees?.forEach((element:IEmployee)=>{
             if(element.id == employee.id || element.dni == employee.dni){
                 return element
             }
@@ -45,7 +45,7 @@ const useEmployees = () =>{
     }
 
 
-    const agregarEmpleado = (newEmployee:Employee) =>  {
+    const agregarEmpleado = (newEmployee:EmployeeClass) =>  {
         try {
             const employee = findEmployee(newEmployee)
             employee ? null : employees?.push(newEmployee);
@@ -55,7 +55,7 @@ const useEmployees = () =>{
         }
     }
 
-    const updateEmployee = (updateEmployee: Employee) => {
+    const updateEmployee = (updateEmployee: EmployeeClass) => {
         try {
             const employee = findEmployee(updateEmployee);
 
@@ -78,7 +78,7 @@ const useEmployees = () =>{
             const empleado = findEmployee(empleadoEliminar)
             
             if(empleado){
-                employees?.filter((employee:Employee) => {
+                employees?.filter((employee:IEmployee) => {
                     if(employee.id != idEmpleado) {
                         return employee
                     }

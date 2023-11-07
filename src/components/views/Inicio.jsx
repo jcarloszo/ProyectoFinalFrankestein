@@ -26,7 +26,7 @@ function Inicio() {
                             Formularios
                         </Link>
                         <Link
-                            to="login"
+                            to="informe"
                             className="btn btn-outline-primary text-decoration-none btn-lg"
                         >
                             Informes

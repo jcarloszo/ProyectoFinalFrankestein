@@ -1,4 +1,4 @@
-interface Employee {
+interface IEmployee {
     id: number;
     name: string; 
     dni: number;
