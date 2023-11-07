@@ -10,6 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
     const navegacion = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -20,16 +21,24 @@ const Login = () => {
 
         if (username === 'agente' && password === '12345') {
             console.log("Inicio de sesion exitoso");
+            setLoggedIn(true);
             navegacion('/')
         } else {
-            Swal.fire(
-                'Error',
-                'Usuario o password incorrectos',
-                'error'
-            )
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Usuario o password incorrectos',
+                confirmButtonText: 'Entendido'
+            });
+            setError('Usuario o password incorrectos');
         }
 
         setLoading(false);
+    };
+
+    const handleLogout = () => {
+        setLoggedIn(false);
+        navegacion('/login');
     };
 
     return (
@@ -64,8 +73,13 @@ const Login = () => {
                     {loading ? 'Iniciando sesión...' : 'Iniciar sesión'}
                 </Button>
             </Form>
+            {loggedIn && (
+                <Button className="mt-3" variant="primary" onClick={handleLogout}>
+                    Salir
+                </Button>
+            )}
         </section>
     );
-}
+};
 
 export default Login;

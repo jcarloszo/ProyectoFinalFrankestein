@@ -1,10 +1,22 @@
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink} from 'react-router-dom';
+import { Link, useNavigate, NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const Menu = () => {
+    const [loggedIn, setLoggedIn] = useState(false);
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        setLoggedIn(true);
+    };
+
+    const handleLogout = () => {
+        setLoggedIn(false);
+    };
+
     return (
         <>
             <Navbar expand="lg" className="bg-primary" data-bs-theme="dark">
@@ -18,7 +30,15 @@ const Menu = () => {
                             <NavLink end className={'nav-item nav-link'} to='/informes'>Informes</NavLink>
                             <NavLink end className={'nav-item nav-link'} to='/agentes'>Agentes</NavLink>
                             <NavLink end className={'nav-item nav-link'} to='/tareas'>Tareas</NavLink>
-                            <NavLink end className={'nav-item nav-link'} to='/login'>Acceder</NavLink>
+                            {loggedIn ? (
+                                <Button className="nav-item nav-link" variant="primary" onClick={handleLogout}>
+                                    Salir
+                                </Button>
+                            ) : (
+                                <NavLink end className={'nav-item nav-link'} to='/login' onClick={handleLogin}>
+                                    Acceder
+                                </NavLink>
+                            )}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
