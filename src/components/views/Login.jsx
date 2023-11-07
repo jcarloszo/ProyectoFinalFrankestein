@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from "../src/assets/Logo.png"
+import Logo from "../../assets/Logo.png"
 
 const Login = () => {
     const [username, setUsername] = useState('');
