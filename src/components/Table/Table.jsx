@@ -7,7 +7,7 @@ import {
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const Table = ({Datos}) => {
+const Table = ({Datos, setAgente}) => {
     const eliminar = (index) => {
         Swal.fire({
             title: `Seguro que quiere eliminar el Agente ${Agentes[index].nombre}`,
@@ -23,12 +23,12 @@ const Table = ({Datos}) => {
     }
 
     const modificar = (index) => {
-        console.log(`modificar usuario ${index}`);
+        setAgente(Datos[index])
     }
 
     return (
         <div>
-            <TableBT responsive className='border'>
+            <TableBT responsive striped bordered hover>
                 <thead className='text-center'>
                     <tr>
                         <th></th>

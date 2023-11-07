@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     Modal,
     Button,
@@ -10,7 +10,7 @@ import {
 import { Search } from "react-bootstrap-icons";
 
 
-const FormCargaAgente = ({show, setShow, Agente}) => {
+const ModalAgente = ({show, setShow, Agente, setAgente}) => {
     const handleClose = () => {setShow(false)}
     const handleSubmit = (e) => {
         console.log(e);
@@ -26,10 +26,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title>
-                            {Agente != undefined ? `Modificacion agente`: `Alta Agente`}
+                            {Agente != null ? `Modificacion agente`: `Alta Agente`}
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body className='overflow-scroll'>
+                    <Modal.Body>
                         <Row className='mb-3'>
                             <InputGroup>
                                 <InputGroup.Text><Search/></InputGroup.Text>
@@ -43,7 +43,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Nombre
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="text"/>
+                                    <Form.Control
+                                        value={Agente!=null?Agente.nombre:""} 
+                                        type="text"
+                                    />
                                 </Col>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="apellido" as={Row}>
@@ -51,7 +54,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Apellido
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="text"/>
+                                    <Form.Control
+                                        value={Agente!=null?Agente.apellido:""}
+                                        type="text"
+                                    />
                                 </Col>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="documento" as={Row}>
@@ -59,7 +65,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Documento
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="number"/>
+                                    <Form.Control 
+                                        value={Agente!=null?Agente.documento:""}
+                                        type="number"
+                                    />
                                 </Col>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="telefono" as={Row}>
@@ -67,7 +76,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Telefono
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="number"/>
+                                    <Form.Control 
+                                        value={Agente!=null?Agente.telefono:""}
+                                        type="number"
+                                    />
                                 </Col>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="mail" as={Row}>
@@ -75,7 +87,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Mail
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="email"/>
+                                    <Form.Control 
+                                        value={Agente!=null?Agente.email:""}
+                                        type="email"
+                                    />
                                 </Col>
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="puesto" as={Row}>
@@ -83,7 +98,10 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
                                     Puesto Actual
                                 </Form.Label>
                                 <Col sm={10}>
-                                    <Form.Control type="text"/>
+                                    <Form.Control 
+                                        value={Agente!=null?Agente.dependencia:""}
+                                        type="text"
+                                    />
                                 </Col>
                             </Form.Group>
                             <hr/>
@@ -110,4 +128,4 @@ const FormCargaAgente = ({show, setShow, Agente}) => {
     );
 };
 
-export default FormCargaAgente;
+export default ModalAgente;
