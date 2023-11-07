@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Logo from "../../assets/Logo.png"
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 function Inicio() {
     return (
@@ -12,18 +13,36 @@ function Inicio() {
                 </div>
                 <div>
                     <div className="d-grid gap-2">
-                        <Button variant="outline-primary" size="lg">
+                        <Link
+                            to="login"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
+                            Pacientes
+                        </Link>
+                        <Link
+                            to="login"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
                             Formularios
-                        </Button>
-                        <Button variant="outline-primary" size="lg">
+                        </Link>
+                        <Link
+                            to="login"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
                             Informes
-                        </Button>
-                        <Button variant="outline-primary" size="lg">
+                        </Link>
+                        <Link
+                            to="login"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
                             Agentes
-                        </Button>
-                        <Button variant="outline-primary" size="lg">
+                        </Link>
+                        <Link
+                            to="login"
+                            className="btn btn-outline-primary text-decoration-none btn-lg"
+                        >
                             Tareas
-                        </Button>
+                        </Link>
                     </div>
                 </div>
             </section>
