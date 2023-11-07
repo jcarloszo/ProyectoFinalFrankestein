@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Logo from "../../assets/Logo.png"
+import Logo from "../../assets/Logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
+    const navegacion = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,6 +19,7 @@ const Login = () => {
 
         if (username === 'agente' && password === '12345') {
             console.log("Inicio de sesion exitoso");
+            navegacion('/')
         } else {
             setError('Nombre de usuario o contraseña incorrecta');
         }
