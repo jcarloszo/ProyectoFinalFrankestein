@@ -20,7 +20,11 @@ const Login = () => {
         setError(null);
 
         if (username === 'agente' && password === '12345') {
-            console.log("Inicio de sesion exitoso");
+            Swal.fire(
+                `Sesion iniciada con exito! `,
+                `Bienvenido ${username}!`,
+                "success"
+            );
             setLoggedIn(true);
             navegacion('/')
         } else {
