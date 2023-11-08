@@ -7,6 +7,7 @@ import Inicio from './components/views/Inicio';
 import Login from "./components/views/Login";
 import Navbar from "./components/common/Menu";
 import Footer from "./components/common/Footer";
+import TareaView from './views/tarea/tarea';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route exact path='/login' element={<Login></Login>}></Route>
         <Route path="/informe" element={<InformeView />} />
         <Route path="/detalle-informe" element={<DetalleInforme />} />
+        <Route path="/tarea" element={<TareaView />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>
