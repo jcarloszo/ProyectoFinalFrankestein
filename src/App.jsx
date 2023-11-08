@@ -12,6 +12,7 @@ import Navbar from "./components/common/Menu";
 import Footer from "./components/common/Footer";
 import GestionUsuarios from './views/GestionUsuarios/GestionUsuarios'
 import ControlAsistencia from './views/ControlAsistencia/ControlAsistencia'
+import TareaView from './views/tarea/tarea';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/detalle-informe" element={<DetalleInforme />} />
         <Route path="/GestionUsuarios" element={<GestionUsuarios />} />
         <Route path="/ControlAsistencia" element={<ControlAsistencia />} />
+        <Route path="/tarea" element={<TareaView />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

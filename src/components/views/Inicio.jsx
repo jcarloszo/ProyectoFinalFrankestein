@@ -38,7 +38,7 @@ function Inicio() {
                             Agentes
                         </Link>
                         <Link
-                            to="login"
+                            to="tarea"
                             className="btn btn-outline-primary text-decoration-none btn-lg"
                         >
                             Tareas
