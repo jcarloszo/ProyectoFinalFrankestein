@@ -9,3 +9,4 @@ Currently, two official plugins are available:
 
 Integrantes: 
  - Valdez Peralta Nahuel Gastón
+ - Zurita Ortiz, Juan Carlos
