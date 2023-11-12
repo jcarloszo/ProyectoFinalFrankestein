@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainSection {
+  flex-grow: 1;
+  
+}
+
+    .imagenInicio {
+      width: 50%; 
+    }
+
+    @media (max-width: 600px) {
+      .imagenInicio {
+        width: 100%; 
+      }
+    }
+    
+    .imagenLogin {
+      width: 30%; 
+    }
+
+    @media (max-width: 600px) {
+      .imagenLogin {
+        width: 100%; 
+      }
+    }    
+
+
+    .celest-background {
+      background-color: rgb(0, 162, 255); 
+    }
+    
+    .day {
+      color: black;
+    }
+    
+    .calendar-container {
+      width: 100px; 
+      height: 300px;
+    }
+    
+    .day {
+      font-size: 12px;
+    }
+    
+    
+    
+    
+
+
