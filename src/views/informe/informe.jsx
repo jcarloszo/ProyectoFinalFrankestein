@@ -48,6 +48,9 @@ function InformeView() {
 
   return (
     <>
+    <div class="justify-content-center text-center my-3 border-bottom border-3 row">
+                <div class="col"><h2>Informes</h2></div>
+            </div>
       <div className="container">
         <div className="row justify-content-center align-items-start">
           <div className="col-mb-6 p-5 calendar-container rounded">
@@ -62,7 +65,7 @@ function InformeView() {
         <Employee onUserChange={handleUserChange} />
         <div  className="container my-4 d-flex justify-content-center p-6 align-items-center flex-column">
         <button
-          className="p-2 mt-3 rounded bg-primary"
+          className="p-2 mt-3 rounded btn btn-primary"
           onClick={handleVerDetalleClick}
         >
           Ver Detalle del Informe

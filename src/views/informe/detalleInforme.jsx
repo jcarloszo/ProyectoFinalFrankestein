@@ -37,7 +37,7 @@ function DetalleInforme() {
     <>
       <div className="container-fluid">
         <div className="mb-4 text-center mt-5">
-          <h1 className="">Acta Control de Permanencia</h1>
+          <h2 className="">Acta Control de Permanencia</h2>
         </div>
         <div className="mb-4 p-5">
           En la Ciudad de San Miguel de Tucuman {formattedDate}
@@ -130,7 +130,7 @@ function DetalleInforme() {
           </div>
           <div className="container my-4 d-flex justify-content-center align-items-center flex-column">
             <button
-              className="p-2 mt-3 rounded bg-primary"
+              className="p-2 mt-3 rounded btn btn-primary"
               onClick={handleRegister}
             >
               Registrar

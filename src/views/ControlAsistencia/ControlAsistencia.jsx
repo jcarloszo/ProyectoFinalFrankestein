@@ -121,14 +121,16 @@ function ControlAsistencia() {
 
     return (
         <div className="container-fluid mt-4">
-            <h2>Control de Asistencia</h2>
+            <div class="justify-content-center text-center my-3 border-bottom border-3 row">
+                <div class="col"><h2>Control de asistencia</h2></div>
+            </div>
             <hr />
             <div className="row">
                 <div className=''>
                     <h4 className='' style={{ textAlign: "left" }}>Agentes presentes</h4>
                 </div>
                 <div className='overflow-scroll p-3 bg-light' style={{ height: "150px" }}>
-                    <table className="table">
+                    <table className="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th style={{ width: "30px" }}>#</th>
@@ -138,7 +140,7 @@ function ControlAsistencia() {
                         </thead>
                         <tbody>
                             {presentes.map((persona, index) => (
-                                <tr key={index}>
+                                <tr key={index} className='align-middle'>
                                     <td>
                                         <button type="button" className="btn btn-danger" onClick={(e) => deletePresente(persona.documento)}>
                                             X
@@ -166,7 +168,7 @@ function ControlAsistencia() {
                     <h4 className='' style={{ textAlign: "left" }}>Agentes ausentes</h4>
                 </div>
                 <div className='overflow-scroll p-3 bg-light' style={{ height: "150px" }}>
-                    <table className="table">
+                    <table className="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th style={{ width: "30px" }}>#</th>
@@ -178,7 +180,7 @@ function ControlAsistencia() {
                         </thead>
                         <tbody>
                             {ausentes.map((persona, index) => (
-                                <tr key={index}>
+                                <tr key={index} className='align-middle'>
                                     <td>
                                         <button type="button" className="btn btn-danger" onClick={(e) => deleteAusente(persona.documento)}>
                                             X

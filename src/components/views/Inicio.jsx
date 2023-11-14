@@ -54,7 +54,7 @@ function Inicio() {
                 {
                     isReadyForInstall ? 
                     <>
-                    <center><button type="button" className="btn btn-outline-primary" onClick={downloadApp}>Descargar Aplicación</button></center>
+                    <center><button type="button" className="btn btn-outline-primary mb-3" onClick={downloadApp}>Descargar Aplicación</button></center>
                     </>
                     : <></>
                 }

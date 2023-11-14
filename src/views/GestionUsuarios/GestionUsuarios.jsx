@@ -34,7 +34,7 @@ const GestionUsuarios = () => {
     return (
         <Container>
             <Row className='justify-content-center text-center my-3 border-bottom border-3'>
-                <Col><h1>Gestion de usuarios</h1></Col>
+                <Col><h2>Gestion de usuarios</h2></Col>
             </Row>
             <Row className='mb-3'>
                 <Col className='text-end'>
